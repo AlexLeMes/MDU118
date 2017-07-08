@@ -1,0 +1,73 @@
+#pragma once
+
+// Make code easier to type with "using namespace"
+using namespace sf;
+
+
+// Function declaration
+void updateBranches(int seed);
+void InitGame();
+
+
+// Where is the player/branch?
+// Left or Right
+enum class side { LEFT, RIGHT, NONE };
+
+Event event;
+
+Texture textureBackground;
+Texture textureTree;
+Texture textureBee;
+Texture textureCloud;
+
+Sprite spriteBackground;
+Sprite spriteTree;
+Sprite spriteBee;
+
+Sprite spriteCloud1;
+Sprite spriteCloud2;
+Sprite spriteCloud3;
+
+Font font;
+Text myText;
+
+sf::Text messageText;
+sf::Text scoreText;
+
+bool beeActive;
+bool cloud1Active;
+bool cloud2Active;
+bool cloud3Active;
+bool paused;
+
+float beeSpeed;
+float cloud1Speed;
+float cloud2Speed;
+float cloud3Speed;
+
+int hRes;
+int vRes;
+int score;
+
+Time dt;
+Time gameTimeTotal;
+
+float timeBarWidthPerSecond;
+
+float timeRemaining;
+
+float timeBarStartWidth;
+float timeBarHeight;
+
+RectangleShape timeBar;
+
+const int NUM_BRANCHES = 6;
+Sprite branches[NUM_BRANCHES];
+side branchPositions[NUM_BRANCHES];
+
+SoundBuffer chopBuffer;
+Sound chop;
+SoundBuffer deathBuffer;
+Sound death;
+SoundBuffer ootBuffer;
+Sound outOfTime;
