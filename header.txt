@@ -1,0 +1,46 @@
+#pragma once
+
+// Make code easier to type with "using namespace"
+using namespace sf;
+
+void InitGame();
+
+// Create a game textures
+Texture textureBackground;
+Texture textureTree;
+Texture textureBee;
+Texture textureCloud;
+
+// Create game sprites
+Sprite spriteBackground;
+Sprite spriteTree;
+Sprite spriteBee;
+
+// 3 New sprites with the same texture
+Sprite spriteCloud1;
+Sprite spriteCloud2;
+Sprite spriteCloud3;
+
+bool beeActive;
+
+// Are the clouds currently on screen?
+bool cloud1Active;
+bool cloud2Active;
+bool cloud3Active;
+
+Text myText;
+Font font;
+
+float beeSpeed;
+
+// How fast is each cloud?
+float cloud1Speed;
+float cloud2Speed;
+float cloud3Speed;
+
+int score = 0;
+Text messageText;
+Text scoreText;
+
+int hRes;
+int vRes;
